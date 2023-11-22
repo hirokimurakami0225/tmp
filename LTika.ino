@@ -1,35 +1,22 @@
-int led = 2;
-const int PIN_DIGITAL_OUTPUT3 = 32;
+const int PIN_LED = 2;
+const int PIN_WD  = 4;
 
 void setup() {
   
-  pinMode(PIN_DIGITAL_OUTPUT3, OUTPUT);
-  pinMode(led, OUTPUT);
+  pinMode(PIN_LED, OUTPUT);
+  pinMode(PIN_WD, OUTPUT);
 
-   Serial.begin(9600);
-     Serial.println( "start" );  
+  Serial.begin(9600);
+  Serial.println( "start" );  
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(led, HIGH);
-  delay(500);
-  digitalWrite(led, LOW);
-  delay(500);
+void loop()
+ {
 
-  char key;     // 受信データを格納するchar型の変数
-  if ( Serial.available() ) {       // 受信データがあるか？
-    key = Serial.read();            // 1文字だけ読み込む
-    if (key == 'a')
-    {
-      Serial.println( "reset!");  
-      delay(1000);
-      digitalWrite(PIN_DIGITAL_OUTPUT3, LOW);
-      delay(3000);
-      digitalWrite(PIN_DIGITAL_OUTPUT3, HIGH);//esp32の再起動
-      delay(3000);
-
-    }
-  }
-
+  digitalWrite(PIN_LED, HIGH);
+  digitalWrite(PIN_WD, HIGH);
+  delay(1000);
+  digitalWrite(PIN_LED, LOW);
+  digitalWrite(PIN_WD, LOW);
+  delay(1000);
 }
