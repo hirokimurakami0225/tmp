@@ -1,0 +1,8 @@
+node.js
+
+・node-v16.13.1-x64.msiでインストール
+・Automattically install the necessary tools.のチェックはpython2、Visual Studio BUild Toolsがはいるらしいのでチェックは外す
+・node -vでヴァージョンが出ればOK
+・npm -vでヴァージョンが出ればOK
+
+

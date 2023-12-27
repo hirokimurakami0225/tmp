@@ -1,0 +1,5 @@
+・npm init 
+ じょんそんファイル作成していく(フォルダがhttpなどでは名前がかぶるからだめ 今回sv)
+・npm install express --save
+　※npmが古いといわれて、npm install -g npm@8.3.0を行う
+・npm install ejs --save
